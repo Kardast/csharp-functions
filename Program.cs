@@ -74,3 +74,55 @@ Console.WriteLine("la somma al quadrato è: " + SommaElementiArray(array) * Somm
 //ossia debbono poter funzionare sia che gli passi array di 5 elementi, sia di 6, di 7, di ... e così via.
 //A questo punto modificare il programma in modo che chieda all’utente quanti numeri voglia inserire, e dopo di che questi vengono inseriti a mano dall’utente esternamente.
 //Rieseguire il programma con l’input preso esternamente dall’utente. (modificato) 
+Console.WriteLine("Quanti numeri vuoi inserire per creare il tuo array?");
+int myNum = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Hai inserito il numero " + myNum);
+int[] myArray = new int[myNum];
+Console.WriteLine("Inserisci " + myNum + " numeri");
+for (int i = 0; i < myArray.Length; i++)
+{
+    int arrayNum = Convert.ToInt32(Console.ReadLine());
+    myArray[i] = arrayNum;
+}
+StampaArray(myArray);
+int[] myArrayQuadrato = ElevaArrayAlQuadrato(myArray);
+StampaArray(myArrayQuadrato);
+StampaArray(myArray);
+Console.WriteLine("la somma è: " + SommaElementiArray(myArray));
+Console.WriteLine("la somma al quadrato è: " + SommaElementiArray(myArray) * SommaElementiArray(myArray));
+
+
+
+
+//Si chiede di implementare due funzioni che eseguano le corrsipettive funzioni matematiche:
+
+//1 - Fattoriale di un numero
+//2 - La sequenza di fibonacci di un numero
+
+//1) il fattoriale di un numero può essere calcolato solo su numeri positivi:
+
+//0! = 1
+//1! = 1
+//2! = 2
+//3! = 6
+//4! = 24
+//5! = 120
+//N! = ???
+//risolverla in modo RICORSIVO
+//o anche in modo ITERATIVO (FOR)
+
+//n Fn
+//0	0
+//1	1
+//2	1
+//3	2
+//4	3
+//5	5
+//6	8
+//7	13
+//8	21
+//9	34
+//10	55
+//fibonacci(10) = 55
+//isolverla in modo RICORSIVO
+//o anche in modo ITERATIVO (FOR)
