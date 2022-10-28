@@ -74,22 +74,22 @@ Console.WriteLine("la somma al quadrato è: " + SommaElementiArray(array) * Somm
 //ossia debbono poter funzionare sia che gli passi array di 5 elementi, sia di 6, di 7, di ... e così via.
 //A questo punto modificare il programma in modo che chieda all’utente quanti numeri voglia inserire, e dopo di che questi vengono inseriti a mano dall’utente esternamente.
 //Rieseguire il programma con l’input preso esternamente dall’utente. (modificato) 
-Console.WriteLine("Quanti numeri vuoi inserire per creare il tuo array?");
-int myNum = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Hai inserito il numero " + myNum);
-int[] myArray = new int[myNum];
-Console.WriteLine("Inserisci " + myNum + " numeri");
-for (int i = 0; i < myArray.Length; i++)
-{
-    int arrayNum = Convert.ToInt32(Console.ReadLine());
-    myArray[i] = arrayNum;
-}
-StampaArray(myArray);
-int[] myArrayQuadrato = ElevaArrayAlQuadrato(myArray);
-StampaArray(myArrayQuadrato);
-StampaArray(myArray);
-Console.WriteLine("la somma è: " + SommaElementiArray(myArray));
-Console.WriteLine("la somma al quadrato è: " + SommaElementiArray(myArray) * SommaElementiArray(myArray));
+//Console.WriteLine("Quanti numeri vuoi inserire per creare il tuo array?");
+//int myNum = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Hai inserito il numero " + myNum);
+//int[] myArray = new int[myNum];
+//Console.WriteLine("Inserisci " + myNum + " numeri");
+//for (int i = 0; i < myArray.Length; i++)
+//{
+//    int arrayNum = Convert.ToInt32(Console.ReadLine());
+//    myArray[i] = arrayNum;
+//}
+//StampaArray(myArray);
+//int[] myArrayQuadrato = ElevaArrayAlQuadrato(myArray);
+//StampaArray(myArrayQuadrato);
+//StampaArray(myArray);
+//Console.WriteLine("la somma è: " + SommaElementiArray(myArray));
+//Console.WriteLine("la somma al quadrato è: " + SommaElementiArray(myArray) * SommaElementiArray(myArray));
 
 
 
@@ -109,6 +109,19 @@ Console.WriteLine("la somma al quadrato è: " + SommaElementiArray(myArray) * So
 //5! = 120
 //N! = ???
 //risolverla in modo RICORSIVO
+Console.WriteLine("Inserisci un numero");
+int facNum = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine(facFun(facNum));
+int facFun(int facNum)
+{
+    int tot = 0;
+    for (int i = facNum; i > 0; i--)
+    {
+        tot += i * i--;
+    }
+    return tot;
+}
+
 //o anche in modo ITERATIVO (FOR)
 
 //n Fn
