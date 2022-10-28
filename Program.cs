@@ -7,9 +7,44 @@ Console.WriteLine("Hello, World!");
 //Scrivete nel vostro programma principale Program.cs le seguenti funzioni di base:
 //void StampaArray(int[] array): che preso un array di numeri interi, stampa a video il contenuto dell’array in questa forma “[elemento 1, elemento 2, elemento 3, ...]“.
 //Potete prendere quella fatta in classe questa mattina
+
+//int[] array = { 1, 3, 4, 5, 6 };
+//StampaArray(array);
+void StampaArray(int[] array)
+{
+    Console.WriteLine("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.WriteLine("elemento " + array[i] + ", ");
+    };
+    Console.WriteLine("]");
+}
+
 //int Quadrato(int numero): che vi restituisca il quadrato del numero passato come parametro.
+//int numero = 5;
+//Console.WriteLine(Quadrato(numero));
+int Quadrato(int numero)
+{
+    return numero * numero;
+}
+
 //int[] ElevaArrayAlQuadrato(int[] array): che preso un array di numeri interi, restituisca un nuovo array con tutti gli elementi elevati quadrato.
 //Attenzione: è importante restituire un nuovo array, e non modificare l’array come parametro della funzione! Vi ricordate perchè? Pensateci (vedi slide)
+int[] array = { 1, 3, 4, 5, 6 };
+int[] arrayQuadrato = ElevaArrayAlQuadrato(array);
+int[] ElevaArrayAlQuadrato(int[] array)
+{
+    int[] arrayQuadrato = new int[array.Length];
+    for (int i = 0; i < array.Length; i++)
+    {
+        arrayQuadrato[i] = Quadrato(array[i]);
+    }
+    return arrayQuadrato;
+}
+StampaArray(arrayQuadrato);
+
+
+
 //int SommaElementiArray(int[] array): che preso un array di numeri interi, restituisca la somma totale di tutti gli elementi dell’array.
 //Una volta completate queste funzioni di utilità di base, e dato il seguente array di numeri [2, 6, 7, 5, 3, 9] già dichiarato nel vostro codice, si vogliono utilizzare le funzioni per:
 //Stampare l’array di numeri fornito a video
