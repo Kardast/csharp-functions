@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using Microsoft.VisualBasic;
 using System;
 
 Console.WriteLine("Hello, World!");
@@ -108,21 +109,22 @@ Console.WriteLine("la somma al quadrato è: " + SommaElementiArray(array) * Somm
 //4! = 24
 //5! = 120
 //N! = ???
-//risolverla in modo RICORSIVO
+
+//Risolverla in modo ITERATIVO (FOR)
 Console.WriteLine("Inserisci un numero");
 int facNum = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(facFun(facNum));
 int facFun(int facNum)
 {
-    int tot = 0;
-    for (int i = facNum; i > 0; i--)
+    int tot = facNum;
+    for (int i = facNum; i > 1; i--)
     {
-        tot += i * i--;
+        tot = tot * (i - 1);
     }
     return tot;
 }
 
-//o anche in modo ITERATIVO (FOR)
+//risolverla in modo RICORSIVO
 
 //n Fn
 //0	0
@@ -139,3 +141,6 @@ int facFun(int facNum)
 //fibonacci(10) = 55
 //isolverla in modo RICORSIVO
 //o anche in modo ITERATIVO (FOR)
+
+//COMPITO VACANZE
+//chiedere all'utente una stringa, chiedere all'utente un chiave (numerica) che possa realizzare un CIFRATORE / DECIFRATORE del CIFRARIO DI CESARE
