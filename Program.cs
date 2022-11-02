@@ -161,8 +161,21 @@ Console.WriteLine("la somma al quadrato è: " + SommaElementiArray(array) * Somm
 //9	34
 //10	55
 //fibonacci(10) = 55
-//isolverla in modo RICORSIVO
-//o anche in modo ITERATIVO (FOR)
+//risolverla in modo RICORSIVO
+int Fibonacci(int numero)
+{
+    if (numero <= 2)
+    {
+        return 1;
+    }
+    else
+    {
+        return Fibonacci(numero - 1) + Fibonacci(numero - 2);
+    }
+}
+Console.WriteLine(Fibonacci(10));
+
+//e in modo ITERATIVO (FOR)
 
 //COMPITO VACANZE
 //chiedere all'utente una stringa, chiedere all'utente un chiave (numerica) che possa realizzare un CIFRATORE / DECIFRATORE del CIFRARIO DI CESARE
@@ -192,7 +205,7 @@ Cesare(cript, numberKey, input);
 
 void Cesare(string cript, int numberKey, string input)
 {
-    char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'z' };
+    char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w'};
 
     //dividere le singole lettere della stringa ed inserirle in un array [c, i, a, o]
     char[] inputCharArray = input.ToCharArray();
